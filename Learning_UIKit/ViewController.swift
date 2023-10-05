@@ -4,9 +4,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var imageViewFrame: UIImageView!
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet var countValue: UILabel!
-    @IBOutlet var countLabel: UILabel!
-    @IBOutlet var buttonPressMe: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +27,19 @@ class ViewController: UIViewController {
     @objc func SwipeRight(_ gesture: UISwipeGestureRecognizer) {
         prevImage()
     }
-    
-    @IBAction func updateCount(_ sender: Any) {
-        let prev_value: Int = Int(countValue.text!) ?? 0
-        countValue.text = String(prev_value + 1)
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
     }
     
-    @IBAction func visibilityChange(_ power: UISwitch) {
-        if power.isOn {
-            countValue.isHidden = false
-            countLabel.isHidden = false
-            buttonPressMe.isHidden = false
-        }else {
-            countValue.isHidden = true
-            countLabel.isHidden = true
-            buttonPressMe.isHidden = true
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = String(indexPath.row)
+        
+        return cell
     }
+    
+    
 }
