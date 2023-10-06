@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Images View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ListImageViewController" id="Y6W-OH-hqX" customClass="ListImagesViewController" customModule="Learning_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-2G-bBN">
+                                <rect key="frame" x="188" y="57" width="52" height="25"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0eU-E6-ZG2">
+                                <rect key="frame" x="0.0" y="102" width="428" height="790"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="tza-MA-J41" customClass="CustomTableViewCell" customModule="Learning_UIKit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="428" height="52.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tza-MA-J41" id="i7v-sd-igY">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="52.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UNw-6m-NNZ">
+                                                    <rect key="frame" x="30" y="1" width="50" height="50.333333333333336"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="a8h-mI-dDf"/>
+                                                        <constraint firstAttribute="height" constant="50" id="nLf-GC-PfN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwz-CB-fiM">
+                                                    <rect key="frame" x="90" y="5" width="328" height="42.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UNw-6m-NNZ" firstAttribute="leading" secondItem="i7v-sd-igY" secondAttribute="leading" constant="30" id="9cZ-tw-A57"/>
+                                                <constraint firstAttribute="bottom" secondItem="UNw-6m-NNZ" secondAttribute="bottom" constant="1" id="NoL-5W-RFI"/>
+                                                <constraint firstAttribute="trailing" secondItem="nwz-CB-fiM" secondAttribute="trailing" constant="10" id="TmS-af-fqm"/>
+                                                <constraint firstItem="nwz-CB-fiM" firstAttribute="leading" secondItem="UNw-6m-NNZ" secondAttribute="trailing" constant="10" id="WNU-Gv-4bB"/>
+                                                <constraint firstItem="nwz-CB-fiM" firstAttribute="top" secondItem="i7v-sd-igY" secondAttribute="top" constant="5" id="hQT-rz-KQR"/>
+                                                <constraint firstAttribute="bottom" secondItem="nwz-CB-fiM" secondAttribute="bottom" constant="5" id="seO-Cg-xKf"/>
+                                                <constraint firstItem="UNw-6m-NNZ" firstAttribute="top" secondItem="i7v-sd-igY" secondAttribute="top" constant="1" id="xd2-6d-Cg4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="UNw-6m-NNZ" id="BWP-PJ-n5O"/>
+                                            <outlet property="label" destination="nwz-CB-fiM" id="JbV-mg-Gpx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Adw-2G-bBN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Cu1-2i-Jaj"/>
+                            <constraint firstItem="0eU-E6-ZG2" firstAttribute="top" secondItem="Adw-2G-bBN" secondAttribute="bottom" constant="20.000000000000014" id="OvR-fJ-rye"/>
+                            <constraint firstItem="Adw-2G-bBN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UOq-fW-wbS"/>
+                            <constraint firstItem="0eU-E6-ZG2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ism-lw-HS7"/>
+                            <constraint firstItem="0eU-E6-ZG2" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="pX1-Hx-VyY"/>
+                            <constraint firstItem="0eU-E6-ZG2" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="yEj-4Y-Yn6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0eU-E6-ZG2" id="avT-EY-NOh"/>
+                        <outlet property="viewLabel" destination="Adw-2G-bBN" id="WOP-TS-lSk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
